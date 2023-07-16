@@ -25,6 +25,15 @@ public class FirstPersonMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            rigidbody.drag = 0;
+        }
+        
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            rigidbody.drag = 2;
+        }
         // Update IsRunning from input.
         IsRunning = canRun && Input.GetKey(runningKey);
 
