@@ -7,9 +7,8 @@ public class DeathTrigger : MonoBehaviour
     public GameObject Player;
   private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) // Если игрок заходит в триггер, то умирает без шанса
         {
-            Debug.Log("Вошел");
             Destroy(Player);
         }
     }

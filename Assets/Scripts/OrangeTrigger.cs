@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class OrangeTrigger : MonoBehaviour
 {
-    private FirstPersonMovement FPM;
-    private DeathTrigger DeathT;
-    private void OnTriggerEnter(Collider other)
+    public  FirstPersonMovement FPM;
+    private void OnTriggerEnter(Collider other) //Вход в триггер
     {
-        if (CompareTag("Player") && FPM.rigidbody.drag == 2)
+        if (other.CompareTag("Player") && FPM.rigidbody.drag == 2) //Проверка, если драг 2, то игрок умирает
         {
-            Destroy(DeathT.Player);
+            Destroy(FPM.gameObject);
         }
     }
 }

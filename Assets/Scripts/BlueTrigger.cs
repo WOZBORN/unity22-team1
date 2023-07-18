@@ -2,17 +2,12 @@ using UnityEngine;
 
 public class BlueTrigger : MonoBehaviour
 {
-    private FirstPersonMovement FPM;
-    private DeathTrigger DeathT;
-    private void OnTriggerEnter(Collider other)
+    public FirstPersonMovement FPM;
+    private void OnTriggerEnter(Collider other) //Вход в триггер
     {
-        Debug.Log("Зашел");
-        Debug.Log(FPM.rigidbody.drag);
-        if (CompareTag("Player") && FPM.rigidbody.drag == 0)
+        if (other.CompareTag("Player") && FPM.rigidbody.drag == 0) //Проверка, если драг 0, то игрок умирает
         {
-            Debug.Log("If Работает");
-
-            Destroy(DeathT.Player);
+            Destroy(FPM.gameObject);
         }
     }
 }
