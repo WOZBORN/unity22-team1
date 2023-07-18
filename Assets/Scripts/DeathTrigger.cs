@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeathTrigger : MonoBehaviour
 {
-    [SerializeField] GameObject Player;
+    public GameObject Player;
   private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
