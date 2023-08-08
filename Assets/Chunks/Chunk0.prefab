@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPM: {fileID: 0}
+  Controller: {fileID: 0}
 --- !u!1 &8692639546124920450
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPM: {fileID: 0}
+  Controller: {fileID: 0}
 --- !u!1 &9060084915982058623
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class FirstPersonMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            rigidbody.drag = 0;
+            rigidbody.drag = 1;
         }
         
         if (Input.GetKey(KeyCode.Mouse1))
