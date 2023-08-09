@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;   
 
 public class FirstPersonMovement : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class FirstPersonMovement : MonoBehaviour
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
 
+    public Image DeathScreen;
+    public Text DeathScreenText;
+
     public Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
@@ -18,12 +22,16 @@ public class FirstPersonMovement : MonoBehaviour
 
     void Awake()
     {
+        DeathScreen.enabled = false;
+        DeathScreenText.enabled = false;
         // Get the rigidbody on this.
         rigidbody = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
     {
+  
+        
         if (Input.GetKey(KeyCode.Mouse0))
         {
             rigidbody.drag = 1;

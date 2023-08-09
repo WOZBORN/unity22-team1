@@ -14,7 +14,10 @@ public class DeathTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player")) // Если игрок заходит в триггер, то умирает без шанса
         {
-            Destroy(FPM.gameObject);
+            FPM.enabled = false;
+            FPM.DeathScreen.enabled = true;
+            FPM.DeathScreenText.enabled = true;
+            FPM.rigidbody.isKinematic = true;
         }
     }
 }

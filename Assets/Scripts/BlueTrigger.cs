@@ -16,7 +16,10 @@ public class BlueTrigger : MonoBehaviour
 
         if (other.CompareTag("Player") && FPM.rigidbody.drag == 1) //Проверка, если драг 0, то игрок умирает
         {
-            Destroy(FPM.gameObject);
+            FPM.enabled = false;
+            FPM.DeathScreen.enabled = true;
+            FPM.DeathScreenText.enabled = true;
+            FPM.rigidbody.isKinematic = true;
         }
     }
 }
